@@ -1,0 +1,64 @@
+@import "tailwindcss";
+
+@theme {
+  /* Brand Emerald Tokens */
+  --color-brand: #059669;
+  --color-brand-dark: #047857;
+  --color-brand-vibrant: #10b981;
+  --color-brand-light: #d1fae5;
+  --color-brand-subtle: #a7f3d0;
+  --color-brand-deep: #065f46;
+
+  /* Backward Compatibility Aliases */
+  --color-emerald-primary: #059669;
+  --color-emerald-dark: #047857;
+  --color-emerald-vibrant: #10b981;
+  --color-emerald-light: #d1fae5;
+
+  /* Surface & Canvas */
+  --color-canvas: #f8fafc;
+  --color-surface: #ffffff;
+  --color-surface-subtle: #f1f5f9;
+
+  /* Typography / Text Colors */
+  --color-text-main: #0f172a;
+  --color-text-body: #475569;
+  --color-text-muted: #64748b;
+  --color-main: #0f172a;
+  --color-body: #475569;
+  --color-muted: #64748b;
+
+  /* Border & Divider */
+  --color-border-subtle: #e2e8f0;
+  --color-line: #e2e8f0;
+
+  /* Font Families */
+  --font-sans: 'Plus Jakarta Sans', 'Inter', system-ui, -apple-system, sans-serif;
+  --font-display: 'Poppins', 'DM Sans', sans-serif;
+}
+
+body {
+  margin: 0;
+  background-color: var(--color-canvas);
+  color: var(--color-text-main);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+@layer base {
+  button:not(:disabled),
+  a[href],
+  summary,
+  select:not(:disabled),
+  input[type="checkbox"]:not(:disabled),
+  input[type="radio"]:not(:disabled),
+  [role="button"] {
+    cursor: pointer;
+  }
+
+  button:disabled,
+  input:disabled,
+  select:disabled {
+    cursor: not-allowed;
+  }
+}
